@@ -49,6 +49,13 @@ async function fetchAPI(endpoint: string, options: RequestInit = {}) {
 
       console.error("API Error:", errorData)
 
+      if (response.status === 401) {
+        localStorage.removeItem("lms-token")
+        if (typeof window !== "undefined") {
+          window.location.href = "/login"
+        }
+      }
+
       const errorMessage =
         errorData?.message ||
         errorData?.detail ||

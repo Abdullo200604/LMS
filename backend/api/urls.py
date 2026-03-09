@@ -27,8 +27,8 @@ from .views import (
 )
 
 urlpatterns = [
-    path('register', RegisterAPIView.as_view(), name='register'),
-    path('login', LoginAPIView.as_view(), name='login'),
+    path('register/', RegisterAPIView.as_view(), name='register'),
+    path('login/', LoginAPIView.as_view(), name='login'),
     path('user/profile', ProfileDetailsAPIView.as_view(), name='profile-get'),
     path('user/profile/update', ProfileUpdateAPIView.as_view(), name='profile-update'),
     path('user/profile/update/v2', ProfileUpdateFieldAPIView.as_view(), name='profile-update-field'),

@@ -4,10 +4,10 @@ export const config = {
   API_BASE_URL: "http://localhost:8000",
 
   // Development mode - set to true to use mock data when API is unavailable
-  DEVELOPMENT_MODE: true,
+  DEVELOPMENT_MODE: false,
 
   // Enable offline mode when API is not accessible
-  ENABLE_OFFLINE_MODE: true,
+  ENABLE_OFFLINE_MODE: false,
 
   // Timeout for API requests (in milliseconds)
   API_TIMEOUT: 10000,
